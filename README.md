@@ -1,5 +1,4 @@
-# Crowdlift Web StarterKit 2.0
-
+# Frontend Kit
 
 
 ## Usage
