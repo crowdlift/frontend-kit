@@ -5,7 +5,7 @@
   "private": true,
   "main": "dist/index",
   "bin": {
-    "cross-env": "./node_modules/cross-env/bin/cross-env.js",
+    "cross-env": "./node_modules/bin/cross-env.js",
     "eslint": "./node_modules/eslint/bin/eslint.js",
     "http-server": "./node_modules/http-server/bin/http-server",
     "npm-run-all": "./node_modules/bin/npm-run-all/index.js",
