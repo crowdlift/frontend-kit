@@ -6,7 +6,7 @@
   "main": "dist/index",
   "bin": {
     "deploy-gh": "bin/deploy-gh.sh",
-    "cross-env": "./node_modules/.bin/cross-env.js"
+    "cross-env": "node_modules/.bin/cross-env.js"
   },
   "repository": "crowdlift/frontend-kit",
   "homepage": "https://github.com/simple10/crowdwebkit#readme",
