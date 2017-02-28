@@ -5,8 +5,12 @@
   "private": true,
   "main": "dist/index",
   "bin": {
-    "deploy-gh": "bin/deploy-gh.sh",
-    "cross-env": "node_modules/.bin/cross-env"
+    "cross-env": "./node_modules/.bin/cross-env",
+    "eslint": "./node_modules/.bin/eslint",
+    "http-server": "./node_modules/.bin/http-server",
+    "npm-run-all": "./node_modules/.bin/npm-run-all",
+    "rimraf": "./node_modules/.bin/rimraf",
+    "webpack-dev-server": "./node_modules/.bin/webpack-dev-server"
   },
   "repository": "crowdlift/frontend-kit",
   "homepage": "https://github.com/simple10/crowdwebkit#readme",
