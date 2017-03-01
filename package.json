@@ -3,7 +3,7 @@
   "version": "0.1.2",
   "description": "Crowdlift website kit.",
   "private": true,
-  "main": "dist/index",
+  "main": "./index.js",
   "bin": {
     "cross-env": "./node_modules/.bin/cross-env",
     "eslint": "./node_modules/.bin/eslint",

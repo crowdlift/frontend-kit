@@ -39,9 +39,15 @@ ncu -a -t
 ```
 
 
-## Useful Commands
+## Release Update
+
+Bump version in package.json and `git commit` it.
 
 ```bash
-# List all globally installed top level NPM packages
-npm list -g --depth=0
+# Create a new tag
+git tag v1.1.2
+# Push to github
+git push origin v3.1.0
+# OR push all tags
+git push origin --tags
 ```
