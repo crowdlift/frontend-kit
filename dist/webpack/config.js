@@ -64,7 +64,7 @@ var configProduction = function configProduction(config, webpackConfig) {
   clone.devtool = 'source-map';
   clone.externals = config.externals;
   clone.entry.vendor = config.entry.vendor;
-  clone.nfig.output.filename = 'js/[name].[chunkhash].min.js';
+  clone.output.filename = 'js/[name].[chunkhash].min.js';
   return clone;
 };
 
