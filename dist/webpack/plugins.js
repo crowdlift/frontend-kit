@@ -73,20 +73,20 @@ var getDefine = function getDefine(config) {
 };
 
 var setup = function setup(config) {
-  var plugins = [];
-  plugins.concat([new _webpack2.default.ProvidePlugin(config.provide), getDefine(config)]);
+  var plugins = [new _webpack2.default.ProvidePlugin(config.provide), getDefine(config)];
+  var envPlugins = void 0;
   switch (config.NODE_ENV) {
     case 'development':
-      plugins.concat(getDevelopment(config));
+      envPlugins = getDevelopment;
       break;
     case 'testing':
     case 'production':
-      plugins.concat(getProduction(config));
+      envPlugins = getProduction;
       break;
     default:
       throw Error('Unrecognized ENV: ', config.ENV);
   }
-  return plugins;
+  return plugins.concat(envPlugins(config));
 };
 
 exports.default = setup;

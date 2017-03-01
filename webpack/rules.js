@@ -21,13 +21,12 @@ const getRules = (config) => {
     },
   ];
 
-  rules.concat(
+  return rules.concat(
     css(config),
     fonts(config),
     images(config),
     pug(config),
   );
-  return rules;
 };
 
 export default getRules;

@@ -67,23 +67,23 @@ const getDefine = (config) => {
 
 
 const setup = (config) => {
-  const plugins = [];
-  plugins.concat([
+  const plugins = [
     new webpack.ProvidePlugin(config.provide),
     getDefine(config),
-  ]);
+  ];
+  let envPlugins;
   switch (config.NODE_ENV) {
     case 'development':
-      plugins.concat(getDevelopment(config));
+      envPlugins = getDevelopment;
       break;
     case 'testing':
     case 'production':
-      plugins.concat(getProduction(config));
+      envPlugins = getProduction;
       break;
     default:
       throw Error('Unrecognized ENV: ', config.ENV);
   }
-  return plugins;
+  return plugins.concat(envPlugins(config));
 };
 
 

@@ -38,8 +38,7 @@ var getRules = function getRules(config) {
     use: ['babel-loader']
   }];
 
-  rules.concat((0, _css2.default)(config), (0, _fonts2.default)(config), (0, _images2.default)(config), (0, _pug2.default)(config));
-  return rules;
+  return rules.concat((0, _css2.default)(config), (0, _fonts2.default)(config), (0, _images2.default)(config), (0, _pug2.default)(config));
 };
 
 exports.default = getRules;
