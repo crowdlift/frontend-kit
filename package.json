@@ -11,6 +11,7 @@
     "http-server": "./node_modules/.bin/http-server",
     "npm-run-all": "./node_modules/.bin/npm-run-all",
     "rimraf": "./node_modules/.bin/rimraf",
+    "webpack": "./node_modules/.bin/webpack",
     "webpack-dev-server": "./node_modules/.bin/webpack-dev-server"
   },
   "repository": "crowdlift/frontend-kit",
