@@ -1,7 +1,18 @@
 {
-  "extends": "./.babelrc.base",
   "presets": [
     "es2015",
     "stage-1",
   ],
+  "plugins": [
+    "dev-expression",
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        ["es2015", { "modules": "commonjs" }],
+        "stage-1",
+      ],
+      "plugins": ["istanbul"],
+    }
+  }
 }
