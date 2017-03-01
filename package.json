@@ -5,6 +5,7 @@
   "private": true,
   "main": "./index.js",
   "bin": {
+    "babel": "./node_modules/.bin/babel",
     "cross-env": "./node_modules/.bin/cross-env",
     "eslint": "./node_modules/.bin/eslint",
     "http-server": "./node_modules/.bin/http-server",
