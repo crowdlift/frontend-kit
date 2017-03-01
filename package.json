@@ -19,7 +19,10 @@
   "scripts": {
     "build": "npm-run-all -p build:*",
     "build:lib": "babel lib --out-dir dist/lib",
-    "build:webpack": "babel webpack --out-dir dist/webpack"
+    "build:webpack": "babel webpack --out-dir dist/webpack",
+    "clean": "rimraf dist",
+    "prebuild": "cross-env RELEASE=1 npm-run-all -p clean test",
+    "test": "echo No tests implemented yet"
   },
   "license": "UNLICENSED",
   "dependencies": {
