@@ -3,6 +3,23 @@
 
 ## Usage
 
+```json
+// Add these scripts to package.json
+"scripts": {
+  "build": "npm-run-all -p build:prod",
+  "build:dev": "cross-env NODE_ENV=development BUILD_DIR=./dist/dev webpack --display-chunks --progress",
+  "build:prod": "cross-env NODE_ENV=production webpack --display-chunks --progress",
+  "clean": "rimraf dist",
+  "deploy": "./bin/deploy-gh.sh",
+  "dev": "cross-env NODE_ENV=development webpack-dev-server --progress",
+  "lint": "eslint src *.js",
+  "prebuild": "cross-env RELEASE=1 npm-run-all -p clean test",
+  "serve": "./node_modules/.bin/http-server -p 2000 dist/",
+  "start": "npm run dev",
+  "test": "echo TESTS PLACEHOLDER"
+},
+'''
+
 ```bash
 # After cloning
 yarn install
@@ -40,6 +57,11 @@ ncu -a -t
 
 
 ## Release Update
+
+```bash
+# Build release
+yarn build
+```
 
 Bump version in package.json and `git commit` it.
 

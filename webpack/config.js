@@ -1,4 +1,4 @@
-// require('babel-register');
+require('babel-register');
 
 import rules from './rules';
 import resolve from './resolve';

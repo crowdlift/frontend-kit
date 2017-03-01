@@ -15,17 +15,9 @@
   "repository": "crowdlift/frontend-kit",
   "homepage": "https://github.com/simple10/crowdwebkit#readme",
   "scripts": {
-    "build": "npm-run-all -p build:prod",
-    "build:dev": "cross-env NODE_ENV=development BUILD_DIR=./dist/dev webpack --display-chunks --progress",
-    "build:prod": "cross-env NODE_ENV=production webpack --display-chunks --progress",
-    "clean": "rimraf dist",
-    "deploy": "./bin/deploy-gh.sh",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --progress",
-    "lint": "eslint src *.js",
-    "prebuild": "cross-env RELEASE=1 npm-run-all -p clean test",
-    "serve": "./node_modules/.bin/http-server -p 2000 dist/",
-    "start": "npm run dev",
-    "test": "echo TESTS PLACEHOLDER"
+    "build": "npm-run-all -p build:*",
+    "build:lib": "babel lib --out-dir dist/lib",
+    "build:webpack": "babel webpack --out-dir dist/webpack"
   },
   "license": "UNLICENSED",
   "dependencies": {

@@ -1,2 +1,8 @@
 
-export { setup as default, setup } from './webpack/config';
+const config = require('./dist/webpack/config');
+
+module.exports = {
+  webpack: {
+    config,
+  },
+};
