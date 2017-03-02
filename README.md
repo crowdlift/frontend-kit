@@ -52,14 +52,21 @@ Bump version in package.json and `git commit` it.
 ```bash
 # Create a new tag
 git tag v1.1.2
-# Push to github
-git push origin v3.1.0
+# Update latest tag
+git tag latest
 # OR push all tags
 git push origin --tags
 
 
+###############################
+# Other useful commands
+
+# Push a specific tag
+git push origin v3.1.0
+
 # Delete local tag
 git tag -d v0.1.1
-# Remove a remote tag
+
+# Delete a remote tag
 git push origin :refs/tags/v0.1.1
 ```

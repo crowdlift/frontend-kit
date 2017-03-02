@@ -1,6 +1,6 @@
 {
   "name": "frontendkit",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Crowdlift website kit.",
   "private": true,
   "main": "./index.js",
@@ -14,7 +14,7 @@
     "webpack": "./node_modules/.bin/webpack",
     "webpack-dev-server": "./node_modules/.bin/webpack-dev-server"
   },
-  "repository": "crowdlift/frontend-kit",
+  "repository": "crowdlift/frontendkit",
   "homepage": "https://github.com/simple10/crowdwebkit#readme",
   "scripts": {
     "build": "npm-run-all -p build:*",
