@@ -29,8 +29,13 @@
 # Check which packages can be upgrade in package.json
 npm-check-updates # or ncu
 
-# Upgrade all packages
-ncu -a
+# Upgrade all packages except eslint
+# eslint-config-airbnb 15.x requires eslint 3.19
+ncu -a -x eslint,eslint-plugin-jsx-a11y,eslint-plugin-import,eslint-plugin-react
+
+# Check to make sure eslint config will work after upgrading
+# Compare to versions in package.json
+npm info "eslint-config-airbnb@latest" peerDependencies
 
 # Upgrade to the highest version available packages, including beta
 ncu -a -t
