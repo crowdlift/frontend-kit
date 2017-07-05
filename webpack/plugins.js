@@ -15,8 +15,8 @@ const getDevelopment = () =>
   ];
 
 
-const getProduction = config =>
-  [
+const getProduction = (config) => {
+  const plugins = [
     new webpack.LoaderOptionsPlugin({
       minimize: true,
       debug: false,
@@ -26,6 +26,11 @@ const getProduction = config =>
       name: 'vendor',
       minChunks: Infinity,
     }),
+  ];
+  if (config.moduleConcatenation) {
+    plugins.push(new webpack.optimize.ModuleConcatenationPlugin());
+  }
+  return plugins.concat([
     new webpack.optimize.UglifyJsPlugin({
       // https://webpack.js.org/plugins/uglifyjs-webpack-plugin/#usage
       mangle: true,
@@ -55,7 +60,8 @@ const getProduction = config =>
       minRatio: 0.8,
     }),
     new CopyWebpackPlugin(config.static.copy, config.static.ignore),
-  ];
+  ]);
+};
 
 
 const getDefine = (config) => {
