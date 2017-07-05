@@ -1,6 +1,6 @@
 {
   "name": "frontendkit",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Crowdlift website kit.",
   "private": true,
   "main": "./index.js",
