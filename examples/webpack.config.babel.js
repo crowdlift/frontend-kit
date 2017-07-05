@@ -88,8 +88,8 @@ const extractSass = new ExtractTextPlugin({
   disable: ENV_DEVELOPMENT,
 });
 const extractSassLoader = extractSass.extract({
-  fallbackLoader: 'style-loader',
-  loader: [
+  fallback: 'style-loader',
+  use: [
     // Use cssLoaders without style-loader
     ...cssLoaders.slice(1),
     {
