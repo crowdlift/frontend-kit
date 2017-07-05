@@ -55,6 +55,7 @@ var getProduction = function getProduction(config) {
       sequences: true,
       unused: true,
       warnings: false
+      // drop_console: true,
     }
   }), new _compressionWebpackPlugin2.default({
     asset: '[path].gz[query]',
