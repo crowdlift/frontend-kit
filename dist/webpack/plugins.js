@@ -31,13 +31,17 @@ var getDevelopment = function getDevelopment() {
 };
 
 var getProduction = function getProduction(config) {
-  return [new _webpack2.default.LoaderOptionsPlugin({
+  var plugins = [new _webpack2.default.LoaderOptionsPlugin({
     minimize: true,
     debug: false
   }), new _webpackMd5Hash2.default(), new _webpack2.default.optimize.CommonsChunkPlugin({
     name: 'vendor',
     minChunks: Infinity
-  }), new _webpack2.default.optimize.UglifyJsPlugin({
+  })];
+  if (config.moduleConcatenation) {
+    plugins.push(new _webpack2.default.optimize.ModuleConcatenationPlugin());
+  }
+  return plugins.concat([new _webpack2.default.optimize.UglifyJsPlugin({
     // https://webpack.js.org/plugins/uglifyjs-webpack-plugin/#usage
     mangle: true,
     sourceMap: true,
@@ -63,7 +67,7 @@ var getProduction = function getProduction(config) {
     test: /\.js$|\.html$/,
     threshold: 10240,
     minRatio: 0.8
-  }), new _copyWebpackPlugin2.default(config.static.copy, config.static.ignore)];
+  }), new _copyWebpackPlugin2.default(config.static.copy, config.static.ignore)]);
 };
 
 var getDefine = function getDefine(config) {
