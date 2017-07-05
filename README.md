@@ -69,4 +69,6 @@ git tag -d v0.1.1
 
 # Delete a remote tag
 git push origin :refs/tags/v0.1.1
+# or github allows shorthand
+git push origin :v0.1.1
 ```
