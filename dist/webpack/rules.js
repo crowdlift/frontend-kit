@@ -34,7 +34,7 @@ var getRules = function getRules(config) {
   // JavaScript
   {
     test: /\.js$/,
-    exclude: /node_modules/,
+    exclude: /node_modules(?!(\/|\\)frontendkit-components)/,
     use: ['babel-loader']
   }];
 

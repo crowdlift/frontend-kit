@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 var getPug = function getPug() {
   return [{
     test: /\.pug|\.jade$/,
-    exclude: /node_modules/,
+    exclude: /node_modules(?!(\/|\\)frontendkit-components)/,
     use: ['pug-loader']
   }];
 };

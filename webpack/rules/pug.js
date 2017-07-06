@@ -2,7 +2,7 @@
 const getPug = () =>
   [{
     test: /\.pug|\.jade$/,
-    exclude: /node_modules/,
+    exclude: /node_modules(?!(\/|\\)frontendkit-components)/,
     use: ['pug-loader'],
   }];
 
